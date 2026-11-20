@@ -1,4 +1,4 @@
-import { MeshEdge, MeshNode } from '../types/mesh';
+import type { MeshEdge, MeshNode } from '../types/mesh';
 
 interface Props {
   nodes: MeshNode[];

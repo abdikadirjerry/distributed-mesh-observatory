@@ -8,7 +8,7 @@ import { TopObservatoryBar } from './components/TopObservatoryBar';
 import { TopologyCanvas } from './components/TopologyCanvas';
 import { TraceWaterfallView } from './components/TraceWaterfallView';
 import { useMeshObservatory } from './hooks/useMeshObservatory';
-import { ViewTab } from './types/mesh';
+import type { ViewTab } from './types/mesh';
 
 export function App() {
   const [activeTab, setActiveTab] = useState<ViewTab>('topology');

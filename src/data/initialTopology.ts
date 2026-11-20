@@ -1,4 +1,4 @@
-import { MeshEdge, MeshNode } from '../types/mesh';
+import type { MeshEdge, MeshNode } from '../types/mesh';
 
 export const INITIAL_NODES: MeshNode[] = [
   {

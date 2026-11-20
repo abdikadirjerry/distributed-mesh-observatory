@@ -1,4 +1,4 @@
-import { DistributedTrace } from '../types/mesh';
+import type { DistributedTrace } from '../types/mesh';
 
 export const SAMPLE_TRACES: DistributedTrace[] = [
   {

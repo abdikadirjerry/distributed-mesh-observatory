@@ -1,4 +1,4 @@
-import { ChaosConfig, DistributedTrace, MeshEdge, MeshNode } from '../types/mesh';
+import type { ChaosConfig, DistributedTrace, MeshEdge, MeshNode } from '../types/mesh';
 
 export function tickMeshTelemetry(
   nodes: MeshNode[],

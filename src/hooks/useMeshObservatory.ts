@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { INITIAL_EDGES, INITIAL_NODES } from '../data/initialTopology';
 import { SAMPLE_TRACES } from '../data/sampleTraces';
 import { synthesizeLiveTrace, tickMeshTelemetry } from '../engine/telemetrySimulator';
-import { ChaosConfig, CircuitState, DistributedTrace, MeshEdge, MeshNode } from '../types/mesh';
+import type { ChaosConfig, CircuitState, DistributedTrace, MeshEdge, MeshNode } from '../types/mesh';
 
 export function useMeshObservatory() {
   const [nodes, setNodes] = useState<MeshNode[]>(INITIAL_NODES);

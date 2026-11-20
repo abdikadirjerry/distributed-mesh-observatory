@@ -1,5 +1,5 @@
 import { calculateMeshHealthScore } from '../engine/telemetrySimulator';
-import { MeshNode } from '../types/mesh';
+import type { MeshNode } from '../types/mesh';
 
 interface Props {
   nodes: MeshNode[];

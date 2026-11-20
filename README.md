@@ -1,75 +1,15 @@
-# React + TypeScript + Vite
+# AetherMesh — Distributed Service Mesh & Trace Observatory (`ts-distributed-mesh-observatory`)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive distributed systems observability studio built with **React, TypeScript, Vite, and Tailwind CSS** for visualizing microservice topologies, distributed trace waterfalls, Envoy circuit breakers, and chaos fault injection.
 
-Currently, two official plugins are available:
+## Architecture & Modules
+- **Interactive SVG Topology Map (`TopologyCanvas.tsx`):** Visualizes 6 microservices across `edge`, `core`, `data`, and `async` tiers with real-time gRPC, HTTP/2, TCP, and Kafka edge latencies.
+- **Distributed Trace Waterfall (`TraceWaterfallView.tsx`):** Renders multi-span request timelines with proportional offset bars, status indicators, and OpenTelemetry-style span tags.
+- **Circuit Breaker Matrix (`CircuitBreakerMatrix.tsx`):** Allows immediate `CLOSED`, `HALF_OPEN`, and `OPEN` fault isolation across cluster workloads.
+- **Chaos & Load Lab (`ChaosLabPanel.tsx` & `SlaBurnRateCard.tsx`):** Injects ingress RPS multipliers, artificial latency, and packet loss while forecasting 30-day SLO error budget burn rates.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+## Local Development
+```bash
+npm install
+npm run dev
 ```

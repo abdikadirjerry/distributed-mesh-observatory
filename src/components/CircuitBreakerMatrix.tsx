@@ -1,4 +1,4 @@
-import { CircuitState, MeshNode } from '../types/mesh';
+import type { CircuitState, MeshNode } from '../types/mesh';
 
 interface Props {
   nodes: MeshNode[];

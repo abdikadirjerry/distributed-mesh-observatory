@@ -1,5 +1,5 @@
 import { Flame } from 'lucide-react';
-import { ChaosConfig, MeshNode } from '../types/mesh';
+import type { ChaosConfig, MeshNode } from '../types/mesh';
 
 interface Props {
   nodes: MeshNode[];

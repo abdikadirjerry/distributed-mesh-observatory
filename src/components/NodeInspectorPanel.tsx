@@ -1,5 +1,5 @@
 import { Cpu, HardDrive, ShieldAlert } from 'lucide-react';
-import { CircuitState, MeshEdge, MeshNode } from '../types/mesh';
+import type { CircuitState, MeshEdge, MeshNode } from '../types/mesh';
 
 interface Props {
   node: MeshNode;

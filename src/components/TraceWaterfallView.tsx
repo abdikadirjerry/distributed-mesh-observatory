@@ -1,5 +1,5 @@
 import { PlusCircle } from 'lucide-react';
-import { DistributedTrace } from '../types/mesh';
+import type { DistributedTrace } from '../types/mesh';
 
 interface Props {
   traces: DistributedTrace[];

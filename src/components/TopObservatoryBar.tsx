@@ -1,5 +1,5 @@
 import { Activity, Pause, Play, RotateCcw } from 'lucide-react';
-import { ViewTab } from '../types/mesh';
+import type { ViewTab } from '../types/mesh';
 
 interface Props {
   activeTab: ViewTab;
